@@ -393,6 +393,7 @@ module.exports = function(webpackEnv) {
                       },
                     },
                   ],
+                    require.resolve('@babel/plugin-proposal-class-properties')
                 ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -418,6 +419,7 @@ module.exports = function(webpackEnv) {
                     { helpers: true },
                   ],
                 ],
+                plugins: ['@babel/plugin-proposal-class-properties'],
                 cacheDirectory: true,
                 cacheCompression: isEnvProduction,
                 // @remove-on-eject-begin
